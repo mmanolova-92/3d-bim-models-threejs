@@ -141,7 +141,6 @@ function init() {
   renderer.setViewport( 0, 0, canvas.clientWidth, canvas.clientHeight );
 
   renderer.setClearColor( 0x000000, 0.0 );
-  //renderer.setClearColor( 0xFFFFFF );
 
   renderer.domElement.style.zIndex = "1";
   renderer.domElement.style.top = "0";
