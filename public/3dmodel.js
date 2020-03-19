@@ -55,11 +55,8 @@ $( document ).ready(function() {
   $( ".openLegend" ).click( function() {
 
     $( ".tabLegend" ).show( "slow" );
+
     $( ".openLegend" ).hide();
-
-    $( ".closeLegend" ).show();
-    $( ".closeLegend" ).css( { "top": "15px", "left": "350px" } );
-
     $( ".openSwitcher" ).hide();
     $( ".openHistory" ).hide();
 
@@ -68,27 +65,18 @@ $( document ).ready(function() {
   $( ".closeLegend" ).click(function() {
 
     $( ".tabLegend" ).hide( "slow" );
-    $( ".closeLegend" ).hide();
 
     $( ".openLegend" ).show();
-    $( ".openLegend" ).css( { "top": "15px", "left": "15px" } );
-
     $( ".openSwitcher" ).show();
-    $( ".openSwitcher" ).css( { "top": "15px", "left": "80px" } );
-
     $( ".openHistory" ).show();
-    $( ".openHistory" ).css( { "top": "15px", "left": "145px" } );
 
   });
 
   $( ".openSwitcher" ).click( function() {
 
     $( ".tabSwitcher" ).show( "slow" );
+
     $( ".openSwitcher" ).hide();
-
-    $( ".closeSwitcher" ).show();
-    $( ".closeSwitcher" ).css( { "top": "15px", "left": "350px" } );
-
     $( ".openLegend" ).hide();
     $( ".openHistory" ).hide();
 
@@ -97,27 +85,18 @@ $( document ).ready(function() {
   $( ".closeSwitcher" ).click(function() {
 
     $( ".tabSwitcher" ).hide( "slow" );
-    $( ".closeSwitcher" ).hide();
 
     $( ".openLegend" ).show();
-    $( ".openLegend" ).css( { "top": "15px", "left": "15px" } );
-
     $( ".openSwitcher" ).show();
-    $( ".openSwitcher" ).css( { "top": "15px", "left": "80px" } );
-
     $( ".openHistory" ).show();
-    $( ".openHistory" ).css( { "top": "15px", "left": "145px" } );
 
   });
 
   $( ".openHistory" ).click( function() {
 
     $( ".tabHistory" ).show( "slow" );
+
     $( ".openHistory" ).hide();
-
-    $( ".closeHistory" ).show();
-    $( ".closeHistory" ).css({ "top": "15px", "left": "350px" } );
-
     $( ".openLegend" ).hide();
     $( ".openSwitcher" ).hide();
 
@@ -126,16 +105,16 @@ $( document ).ready(function() {
   $( ".closeHistory" ).click(function() {
 
     $( ".tabHistory" ).hide( "slow" );
-    $( ".closeHistory" ).hide();
 
     $( ".openLegend" ).show();
-    $( ".openLegend" ).css( { "top": "15px", "left": "15px" } );
-
     $( ".openSwitcher" ).show();
-    $( ".openSwitcher" ).css( { "top": "15px", "left": "80px" } );
-
     $( ".openHistory" ).show();
-    $( ".openHistory" ).css( { "top": "15px", "left": "145px" } );
+
+  });
+
+  $( ".closeDetails" ).click(function() {
+
+    $( "#info" ).hide( "slow" );
 
   });
 
@@ -157,10 +136,12 @@ function init() {
 
   // Set up the WebGL renderer
 
-  renderer = new THREE.WebGLRenderer();
+  renderer = new THREE.WebGLRenderer( { antialias: true, alpha: true } );
   renderer.setSize( canvas.clientWidth, canvas.clientHeight );
   renderer.setViewport( 0, 0, canvas.clientWidth, canvas.clientHeight );
-  renderer.setClearColor( 0xFFFFFF );
+
+  renderer.setClearColor( 0x000000, 0.0 );
+  //renderer.setClearColor( 0xFFFFFF );
 
   renderer.domElement.style.zIndex = "1";
   renderer.domElement.style.top = "0";
@@ -175,7 +156,8 @@ function init() {
 
   camera = new THREE.PerspectiveCamera( 70, canvas.clientWidth / canvas.clientHeight, 0.1, 100000 );
   camera.up.set( 0, 0, 1 );
-  camera.position.set( 0, 0, 127 );
+  camera.position.set( 0, 200, 127 );
+  console.log(camera.position);
   camera.lookAt( scene.position );
   scene.add( camera );
 
