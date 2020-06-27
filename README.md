@@ -26,6 +26,10 @@ The historical data menu shows previous results from the bridge inspections, i.e
 
 ![alt text](https://github.com/mmanolova-92/3d-bim-models-threejs/blob/master/images/3d-viewer-history.png)
 
+For a better investigation of the distinct elements in the 3D model, zoom and rotate functionalities are enabled in the viewer.
+
+![alt text](https://github.com/mmanolova-92/3d-bim-models-threejs/blob/master/images/3d-viewer-zoom-rotate.png)
+
 Due to the large size of the 3D model and longer load times, a progress bar is added on the bottom of the viewer. 
 
 ## Technologies
