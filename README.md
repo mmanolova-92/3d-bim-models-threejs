@@ -6,11 +6,25 @@
 ## Introduction
 The project presents a method for the web-based visualization of 3D models of civil structures for optimizing dynamic and complex processes in Lifecycle Asset Management. The prototype is developed on the basis of WebGL, a technology for web rendering of interactive 3D graphics and animations supported by all modern web browsers.
 
-The created viewer presents the 3D model of Queen's Bridge in Rotterdam. In order to illustrate the surrounding area of the bridge, a 2D base map is added by attaching a plane to the 3D model and adding an image of the surrounding area as texture of the plane. The visibility of the base map is handled by a toggle button on the top of the viewer. For an easier navigation and more user-friendly interface, the 3D viewer is structured in several parts.
+The created viewer presents the 3D model of Queen's Bridge in Rotterdam. In order to illustrate the surrounding area of the bridge, a base map is added by attaching a plane to the 3D model and adding an image of the surrounding area as texture of the plane. The visibility of the base map is handled by a toggle button on the top of the viewer. For an easier navigation and more user-friendly interface, the 3D viewer is structured in several parts.
+
+![alt text](https://github.com/mmanolova-92/3d-bim-models-threejs/blob/master/images/3d-viewer.PNG)
 
 When an element in the model is selected, a popup window appears in the upper right corner to show additional information about the selected object, such as civil structure type, object name, inspection date, inspector, and notes. 
 
-For a better interaction with the 3D model, collapsible menus with a legend, switcher, and history are added to the upper left corner of the 3D viewer. The legend aims to explain the inspection scores and illustrate the colors assigned to them. The switcher is represented in the form of check boxes and the user can choose which elements in the 3D model should be shown in the viewer for further investigation. The historical data menu shows previous results from the bridge inspections, i.e. the distinct elements in the 3D model change their colours dynamically according to the inspection scores when the user selects a year.
+![alt text](https://github.com/mmanolova-92/3d-bim-models-threejs/blob/master/images/3d-viewer-object-selection.PNG)
+
+For a better interaction with the 3D model, collapsible menus with a legend, switcher, and history are added to the upper left corner of the 3D viewer. The legend aims to explain the inspection scores and illustrate the colors assigned to them. 
+
+![alt text](https://github.com/mmanolova-92/3d-bim-models-threejs/blob/master/images/3d-viewer-legend.png)
+
+The switcher is represented in the form of check boxes and the user can choose which elements in the 3D model should be shown in the viewer for further investigation. 
+
+![alt text](https://github.com/mmanolova-92/3d-bim-models-threejs/blob/master/images/3d-viewer-switcher.png)
+
+The historical data menu shows previous results from the bridge inspections, i.e. the distinct elements in the 3D model change their colours dynamically according to the inspection scores when the user selects a year.
+
+![alt text](https://github.com/mmanolova-92/3d-bim-models-threejs/blob/master/images/3d-viewer-history.png)
 
 Due to the large size of the 3D model and longer load times, a progress bar is added on the bottom of the viewer. 
 
