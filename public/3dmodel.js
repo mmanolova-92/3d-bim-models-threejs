@@ -727,7 +727,7 @@ function showHistory() {
 
 function showGround() {
 
-  if ( $( ".toggleSwitch input:checkbox" ).is( ":checked" ) ) {
+  if ( $( ".switch input:checkbox" ).is( ":checked" ) ) {
 
     ground.visible = true;
 
